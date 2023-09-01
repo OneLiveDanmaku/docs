@@ -1,0 +1,109 @@
+---
+import CONFIG from "../../doc.config";
+
+import "@fontsource-variable/cabin";
+
+import { t } from "i18next";
+import { LanguageSelector } from "astro-i18next/components";
+---
+
+<div class="nav">
+  <div class="brand">
+    <img src="/favicon.webp" alt="LOGO" class="brand-logo" />
+    <h1 class="brand-title">OneLiveDanmaku</h1>
+    <h2 class="barnd-version">{CONFIG.version}</h2>
+  </div>
+
+  <div class="hrefs">
+    <a href="/description" class="hrefs-href">{t("navigator.desc")}</a>
+    <a href="/glossary" class="hrefs-href">{t("navigator.glossary")}</a>
+    <a href="/connect" class="hrefs-href">{t("navigator.connect")}</a>
+    <a href="/interface" class="hrefs-href">{t("navigator.interface_def")}</a>
+    <a href="/instance" class="hrefs-href">{t("navigator.instance")}</a>
+  </div>
+
+  <div class="tools">
+    <LanguageSelector
+      showFlag={true}
+      languageMapping={{
+        en: "English",
+        zh_cn: "中文 (简体)",
+      }}
+      class="tools-language-selector"
+    />
+    <svg
+      viewBox="0 0 16 16"
+      aria-hidden="true"
+      width="32"
+      height="32"
+      astro-icon="social/github"
+      class="tools-github"
+      ><path
+        fill="currentColor"
+        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+      ></path></svg
+    >
+  </div>
+</div>
+
+<script>
+  // @ Brand Click
+  const brand = document.querySelector(".brand");
+  brand?.addEventListener("click", () => {
+    window.open("https://github.com/OneLiveDanmaku");
+  });
+
+  // @ Github Click
+  const github_icon = document.querySelector(".tools-github");
+  github_icon?.addEventListener("click", () => {
+    window.open("https://github.com/OneLiveDanmaku/docs")
+  })
+</script>
+
+<style>
+  .nav {
+    @apply fixed backdrop-blur-md w-full h-14 flex items-center p-2 border-b-[1px] border-indigo-200 justify-between;
+  }
+
+  .brand {
+    @apply flex h-10 items-center select-none transition-all;
+    @apply hover:cursor-pointer hover:brightness-75;
+  }
+
+  .brand-logo {
+    @apply h-8 drop-shadow-md mx-1;
+  }
+
+  .brand-title {
+    @apply text-xl mx-1;
+    font-family: "Cabin Variable", sans-serif;
+  }
+
+  .barnd-version {
+    @apply text-gray-800 text-xs mx-1 self-baseline;
+    @apply before:content-['v'];
+  }
+
+  .hrefs {
+    @apply p-2;
+  }
+
+  .hrefs-href {
+    @apply mx-2 font-medium p-2 transition-all;
+    @apply hover:text-indigo-600;
+  }
+
+  .tools {
+    @apply flex items-center;
+  }
+
+  .tools-language-selector {
+    @apply mx-2 cursor-pointer py-1 px-4 appearance-none outline-none rounded-full ring-2 ring-indigo-200 transition-all;
+    @apply hover:ring-indigo-500;
+  }
+
+  .tools-github {
+    @apply mx-2 cursor-pointer transition-all;
+    @apply hover:opacity-50;
+  }
+</style>

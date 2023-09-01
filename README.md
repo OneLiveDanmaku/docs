@@ -1,2 +1,2 @@
-# docs
+# Docs
 Docs for OneLiveDanmaku protocol.

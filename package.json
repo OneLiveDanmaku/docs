@@ -1,0 +1,24 @@
+{
+  "name": "one-live-danmaku-docs",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro-i18next generate && astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^1.0.0",
+    "@astrojs/tailwind": "^5.0.0",
+    "@fontsource-variable/cabin": "^5.0.9",
+    "@types/canvas-confetti": "^1.6.0",
+    "astro": "^3.0.4",
+    "astro-i18next": "^1.0.0-beta.21",
+    "autoprefixer": "^10.4.15",
+    "canvas-confetti": "^1.6.0",
+    "postcss": "^8.4.28",
+    "tailwindcss": "^3.3.3"
+  }
+}

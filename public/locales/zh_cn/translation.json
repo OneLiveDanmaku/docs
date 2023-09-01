@@ -1,0 +1,17 @@
+{
+  "navigator": {
+    "desc": "简介",
+    "glossary": "术语表",
+    "connect": "连接方式",
+    "interface_def": "接口定义",
+    "instance": "实例"
+  },
+
+  "index": {
+    "title": "OneLiveDanmaku 文档",
+    "desc": "构建基于直播弹幕的应用程序最简单方式",
+    "sub_desc": "通过统一的接口屏蔽不同直播平台的接口差异，并可以通过多种方式连接到你的应用",
+    "read_docs": "阅读文档",
+    "browse_instance": "浏览实例"
+  }
+}

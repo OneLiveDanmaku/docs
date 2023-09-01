@@ -1,0 +1,17 @@
+{
+  "navigator": {
+    "desc": "Description",
+    "glossary": "Glossary",
+    "connect": "Connect",
+    "interface_def": "Interface Definition",
+    "instance": "IInstance"
+  },
+
+  "index": {
+    "title": "OneLiveDanmaku Document",
+    "desc": "The simplest way to build an application based on live danmaku.",
+    "sub_desc": "Mask the interface differences between different live streaming platforms through a unified interface and connect to your application in multiple ways.",
+    "read_docs": "Read Docs",
+    "browse_instance": "Browse Instance"
+  }
+}
